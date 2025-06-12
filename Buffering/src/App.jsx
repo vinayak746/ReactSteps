@@ -59,7 +59,6 @@ const App = () => {
   };
   useEffect(() => {
     fetchMovies(debouncedSearchTerm);
-    console.log(API_KEY);
   }, [debouncedSearchTerm]);
   return (
     <main>
