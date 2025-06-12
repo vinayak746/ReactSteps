@@ -48,6 +48,7 @@ const App = () => {
         setMovieList([]);
         return;
       }
+
       setMovieList(data.results || []);
     } catch (error) {
       console.error("Error fetching movies:", error);
@@ -58,6 +59,7 @@ const App = () => {
   };
   useEffect(() => {
     fetchMovies(debouncedSearchTerm);
+    console.log(API_KEY);
   }, [debouncedSearchTerm]);
   return (
     <main>
